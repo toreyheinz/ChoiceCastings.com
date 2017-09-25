@@ -1,0 +1,5 @@
+production:
+  host: http://cms.teagles.io
+  handle: choice-castings
+  email: torey@teagles.io
+  api_key: 688697709bb800280ffd38d5484b1f8bf8b9212d
