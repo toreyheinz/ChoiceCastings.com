@@ -41,3 +41,20 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+body, html {
+    height: 100%;
+    background: none;
+}
+
+html {
+  background: image-url('/images/body-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.wrapper {
+  background: #fff;
+}

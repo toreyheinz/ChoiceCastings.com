@@ -46,29 +46,31 @@ is_layout: true
       </div>
     </div>
     <!-- End Top Bar -->
-    <div class="callout large">
-      <div class="row column text-center">
-        <h1>
-          <img src="{{ 'ChoiceCastingsLogo.png' | theme_image_url }}" style="width: 60px; margin-bottom: 10px">
-          Choice Castings
-          <img src="{{ 'ChoiceCastingsLogo.png' | theme_image_url }}" style="width: 60px; margin-bottom: 10px">
-        </h1>
-        <p class="lead">A Single Source for ALL of Your Casting Needs</p>
+    <div class="wrapper row column">
+      <div class="callout large">
+        <div class="row column text-center">
+          <h1>
+            <img src="{{ 'ChoiceCastingsLogo.png' | theme_image_url }}" style="width: 60px; margin-bottom: 10px">
+            Choice Castings
+            <img src="{{ 'ChoiceCastingsLogo.png' | theme_image_url }}" style="width: 60px; margin-bottom: 10px">
+          </h1>
+          <p class="lead">A Single Source for ALL of Your Casting Needs</p>
+        </div>
       </div>
-    </div>
-    <div class="row column text-center">
-      {% block main %}
-        {% editable_text content %}Lorem ipsum{% endeditable_text %}
-      {% endblock %}
-    </div>
-    <hr>
-    <div class="row column">
-      <ul class="menu">
-        <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-      </ul>
+      <div class="">
+        {% block main %}
+          {% editable_text content %}Lorem ipsum{% endeditable_text %}
+        {% endblock %}
+      </div>
+      <hr>
+      <div class="row">
+        <ul class="menu">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
     </div>
     <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
     {{ 'vendor/what-input.min.js' | javascript_tag }}
