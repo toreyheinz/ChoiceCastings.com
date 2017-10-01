@@ -1,0 +1,13 @@
+# Logfile created on 2017-09-27 13:05:59 -0400 by logger.rb/56815
+I, [2017-09-27T13:05:59.864365 #25227]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2017-09-27T13:05:59.864436 #25227]  INFO -- : Maximum connections set to 1024
+I, [2017-09-27T13:05:59.864456 #25227]  INFO -- : Listening on 0.0.0.0:3000, CTRL+C to stop
+I, [2017-09-27T16:21:25.264398 #36341]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2017-09-27T16:21:25.264759 #36341]  INFO -- : Maximum connections set to 1024
+I, [2017-09-27T16:21:25.264805 #36341]  INFO -- : Listening on 0.0.0.0:3000, CTRL+C to stop
+I, [2017-09-29T14:06:43.403942 #8995]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2017-09-29T14:06:43.404226 #8995]  INFO -- : Maximum connections set to 1024
+I, [2017-09-29T14:06:43.404254 #8995]  INFO -- : Listening on 0.0.0.0:3000, CTRL+C to stop
+I, [2017-09-29T17:49:24.445215 #17299]  INFO -- : Thin web server (v1.6.4 codename Gob Bluth)
+I, [2017-09-29T17:49:24.445299 #17299]  INFO -- : Maximum connections set to 1024
+I, [2017-09-29T17:49:24.445318 #17299]  INFO -- : Listening on 0.0.0.0:3000, CTRL+C to stop
