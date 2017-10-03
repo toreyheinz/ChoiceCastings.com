@@ -58,3 +58,9 @@ html {
 div.wrapper {
   background: #fff;
 }
+
+div.wide-layout {
+  .row {
+    max-width: rem-calc(1200);
+  }
+}

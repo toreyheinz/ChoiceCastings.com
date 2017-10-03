@@ -20,11 +20,11 @@ is_layout: true
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choice Castings | {{ page.seo_title }}</title>
+    <title>Choice Castings | {{ page.slug }}</title>
     {{ 'app.css' | stylesheet_tag }}
 
   </head>
-  <body>
+  <body class="{{ page.slug }}">
     <!-- Start Top Bar -->
     <div class="top-bar">
       <div class="row">
