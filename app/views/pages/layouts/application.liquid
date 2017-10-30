@@ -34,13 +34,24 @@ is_layout: true
             <li><a href="/">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a href="#">Articles</a></li>
           </ul>
         </div>
         <div class="top-bar-right">
-          <ul class="menu">
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Articles</a></li>
+          <ul class="dropdown menu" data-dropdown-menu>
+            {% assign menu_items = 'products solutions materials' | split: ' ' %}
+            {% for page in site.pages %}
+              {% if menu_items contains page.slug %}
+                <li>
+                  {% link_to page %}
+                  <ul class="menu">
+                    {% for subpage in page.children %}
+                      <li>{% link_to subpage %}</li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endif %}
+            {% endfor %}
           </ul>
         </div>
       </div>
@@ -73,6 +84,7 @@ is_layout: true
       </div>
     </div>
     <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    {{ 'vendor/jquery.sticky.js' | javascript_tag }}
     {{ 'vendor/what-input.min.js' | javascript_tag }}
     {{ 'vendor/foundation.min.js' | javascript_tag }}
     {{ 'app.js'                   | javascript_tag }}
