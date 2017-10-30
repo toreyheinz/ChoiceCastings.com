@@ -29,26 +29,20 @@ is_layout: true
     <div class="top-bar">
       <div class="row">
         <div class="top-bar-left">
-          <ul class="menu">
+          <ul class="dropdown menu" data-dropdown-menu data-alignment="left">
             <li class="menu-text">Choice Castings</li>
             <li><a href="/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Articles</a></li>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu>
-            {% assign menu_items = 'products solutions materials' | split: ' ' %}
             {% for page in site.pages %}
-              {% if menu_items contains page.slug %}
+              {% if page.depth == 1 and page.listed? %}
                 <li>
                   {% link_to page %}
-                  <ul class="menu">
-                    {% for subpage in page.children %}
-                      <li>{% link_to subpage %}</li>
-                    {% endfor %}
-                  </ul>
+                  {% unless page.children.size == 0 %}
+                    <ul class="menu">
+                      {% for subpage in page.children %}
+                        <li>{% link_to subpage %}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endunless %}
                 </li>
               {% endif %}
             {% endfor %}
@@ -72,15 +66,6 @@ is_layout: true
         {% block main %}
           {% editable_text content %}Lorem ipsum{% endeditable_text %}
         {% endblock %}
-      </div>
-      <hr>
-      <div class="row">
-        <ul class="menu">
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-          <li><a href="#">Four</a></li>
-        </ul>
       </div>
     </div>
     <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
