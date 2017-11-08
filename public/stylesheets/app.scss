@@ -58,10 +58,11 @@ html {
 
 div.wrapper {
   background: #fff;
+  padding-top: rem-calc(10);
 }
 
 body.index {
   .row {
-    max-width: rem-calc(1200);
+    // max-width: rem-calc(1200);
   }
 }
