@@ -29,7 +29,7 @@ is_layout: true
       <div class="row">
         <div class="top-bar-left">
           <ul class="dropdown menu" data-dropdown-menu data-alignment="left">
-            <li class="menu-text">Choice Castings</li>
+            <li class="menu-text logo"><img src="{{ 'ChoiceCastingsLogo-web.png' | theme_image_url }}"></li>
             <li><a href="/">Home</a></li>
             {% for page in site.pages %}
               {% if page.depth == 1 and page.listed? %}
@@ -50,22 +50,23 @@ is_layout: true
       </div>
     </div>
     <!-- End Top Bar -->
-    <div class="wrapper row column">
-      <div class="callout large">
-        <div class="row column text-center">
-          <h1>
-            <img src="{{ 'ChoiceCastingsLogo.png' | theme_image_url }}" style="width: 60px; margin-bottom: 10px">
-            Choice Castings
-            <img src="{{ 'ChoiceCastingsLogo.png' | theme_image_url }}" style="width: 60px; margin-bottom: 10px">
-          </h1>
-          <p class="lead">A Single Source for ALL of Your Casting Needs</p>
-        </div>
+      <div class="row expanded text-center banner">
+        {% comment %}<img class="banner-image" src="{{ 'banner-1.jpg' | theme_image_url }}">{% endcomment %}
+        <p class="lead">A Single Source for ALL of Your Casting Needs</p>
       </div>
-      <div class="">
+    <div class="wrapper row expanded">
         {% block main %}
+          <div class="row">
           {% editable_text content %}Lorem ipsum{% endeditable_text %}
+          </div>
         {% endblock %}
-      </div>
+      <footer class="row expanded">
+        <div class="row wide text-center">
+          <p><img src="{{ 'ChoiceCastingsLogo-web.png' | theme_image_url }}"></p>
+          <p>Copyright © 2012, Choice Castings Inc. All rights reserved.</p>
+        </div>
+
+      </footer>
     </div>
     <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
     {{ 'vendor/jquery.sticky.js' | javascript_tag }}

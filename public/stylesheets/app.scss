@@ -42,6 +42,7 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
+@import 'slide-show';
 
 body, html {
     height: 100%;
@@ -49,20 +50,86 @@ body, html {
 }
 
 html {
-  background: image-url('/images/body-bg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: image-url('/images/body-bg.png') repeat;
 }
 
 div.wrapper {
   background: #fff;
-  padding-top: rem-calc(10);
+  // padding-top: rem-calc(10);
+  // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 body.index {
-  .row {
-    // max-width: rem-calc(1200);
+  .row.wide {
+    max-width: rem-calc(1200);
+  }
+}
+
+.top-bar {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.24);
+  // background-color: #201E1F;
+
+  .logo img {
+    max-width: 225px;
+  }
+
+  a {
+    color: $white;
+  }
+
+  a:hover {
+    color: $primary-color;
+  }
+}
+
+.banner {
+  position: relative;
+  height: 350px;
+  background: image-url('/images/banner-1.jpg') top center no-repeat;
+  background-size: cover;
+
+  p.lead {
+    @include absolute-center;
+    color: $white;
+    font-weight: bold;
+    font-size: rem-calc(35);
+    background: rgba(0,0,0, 0.75);
+    padding: rem-calc(10);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+}
+
+.row.services {
+  background-color: #E1E2E4;
+}
+
+.row.content {
+  padding: rem-calc(10) 0;
+}
+
+.row.stock-items {
+  background-color: #E1E2E4;
+}
+
+footer {
+  padding-top: rem-calc(10);
+  background: $topbar-background;
+  color: $white;
+}
+
+.card {
+  .title {
+    background: linear-gradient(#4D5D66, #687B86); /* Standard syntax */
+    background: #4D5D66; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#4D5D66, #687B86); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4D5D66, #687B86); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4D5D66, #687B86); /* For Firefox 3.6 to 15 */
+
+    color: $white;
+
+    p.lead {
+      font-weight: bold;
+      font-size: rem-calc(28);
+    }
   }
 }
