@@ -8,7 +8,7 @@ var slides = document.querySelectorAll('ul.slides .slide');
 var currentSlide = Math.floor(Math.random() * slides.length);
 slides[currentSlide].className = 'slide showing';
 
-var slideInterval = setInterval(nextSlide, 3000);
+var slideInterval = setInterval(nextSlide, 5000);
 
 function nextSlide() {
     slides[currentSlide].className = 'slide';
