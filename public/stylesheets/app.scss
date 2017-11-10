@@ -88,14 +88,27 @@ body.index {
   background: image-url('/images/banner-1.jpg') top center no-repeat;
   background-size: cover;
 
+  @include breakpoint(small only) {
+    height: 250px;
+  }
+
   p.lead {
     @include absolute-center;
     color: $white;
     font-weight: bold;
-    font-size: rem-calc(35);
+    font-size: rem-calc(45);
     background: rgba(0,0,0, 0.75);
     padding: rem-calc(10);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    @include breakpoint(medium only) {
+      width: 90%;
+    }
+
+    @include breakpoint(small only) {
+      width: 90%;
+      font-size: rem-calc(25);
+    }
   }
 }
 
