@@ -1,0 +1,16 @@
+<ul class="menu vertical">
+  {% for page in site.pages %}
+    {% if page.slug == slug %}
+      <li>
+        {% link_to page %}
+        {% unless page.children.size == 0 %}
+          <ul class="nested vertical menu">
+            {% for subpage in page.children %}
+              <li>{% link_to subpage %}</li>
+            {% endfor %}
+          </ul>
+        {% endunless %}
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

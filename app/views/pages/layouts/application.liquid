@@ -26,10 +26,15 @@ is_layout: true
   <body class="{{ page.slug }}">
     <!-- Start Top Bar -->
     <div class="top-bar">
-      <div class="row">
+      <div class="row wide">
         <div class="top-bar-left">
+          <ul class="menu">
+            <li class="logo"><a href="/"><img src="{{ 'ChoiceCastingsLogo-web.png' | theme_image_url }}"></a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <div class="contact-bar text-center">(616) 956-6800 | <a href="mailto:info@choicecastings.com">info@choicecastings.com</a></div>
           <ul class="dropdown menu" data-dropdown-menu data-alignment="left">
-            <li class="menu-text logo"><img src="{{ 'ChoiceCastingsLogo-web.png' | theme_image_url }}"></li>
             <li><a href="/">Home</a></li>
             {% for page in site.pages %}
               {% if page.depth == 1 and page.listed? %}
@@ -61,10 +66,31 @@ is_layout: true
           </div>
         {% endblock %}
       <footer class="row expanded">
-        <div class="row wide text-center">
-          <p><img src="{{ 'ChoiceCastingsLogo-web.png' | theme_image_url }}"></p>
-          <p>Copyright © 2012, Choice Castings Inc. All rights reserved.</p>
+        <div class="row wide">
+          <div class="column medium-3">
+            <ul class="menu vertical">
+              <li><a href="/">Home</a></li>
+              {% for page in site.pages %}
+                {% if page.depth == 1 and page.children.size == 0 %}
+                  <li>
+                    {% link_to page %}
+                  </li>
+                {% endif %}
+              {% endfor %}
+              <li class="menu-text"><img src="{{ 'ChoiceCastingsLogo-web.png' | theme_image_url }}"></li>
+            </ul>
+          </div>
+          <div class="column medium-3">
+            {% include 'footer-menu-block' with slug: 'solutions' %}
+          </div>
+          <div class="column medium-3">
+            {% include 'footer-menu-block' with slug: 'materials' %}
+          </div>
+          <div class="column medium-3">
+            {% include 'footer-menu-block' with slug: 'products' %}
+          </div>
         </div>
+          <p class="text-center">Copyright © 2012, Choice Castings Inc. All rights reserved.</p>
 
       </footer>
     </div>
