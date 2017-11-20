@@ -11,3 +11,45 @@ editable_elements:
     E. Beltline Ave. SE<br>Suite 360<br>Grand Rapids, MI 49506<br><br>Email: info@choicecastings.com'
 ---
 {% extends "layouts/application" %}
+{% block main %}
+  <div class="row">
+    <div class="column content page">
+      <h1>{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
+      {% editable_text content %}Lorem ipsum{% endeditable_text %}
+      <hr>
+      <h2>Send us a Message</h2>
+      {% model_form 'customer_messages', success: '/', error: '/contact' %}
+
+        {% if customer_message.errors %}
+          <p>The following errors occured:</p>
+          <ul>
+          {% for error in customer_message.errors %}
+            <li>{{error[0] | capitalize}} -  {{error[1]}}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+
+        <p>
+          Name:<br>
+          <input type="text" name="content[name]" value="{{customer_message.name}}">
+        </p>
+
+        <p>
+          Phone:<br>
+          <input type="text" name="content[phone]" value="{{customer_message.phone}}">
+        </p>
+
+        <p>
+          Email:<br>
+          <input type="text" name="content[email]" value="{{customer_message.email}}">
+        </p>
+
+        <p>
+          Message:<br>
+          <textarea name="content[message]" >{{customer_message.message}}</textarea>
+        </p>
+        <input type="submit" class="button" value="Send Message">
+      {% endmodel_form %}
+    </div>
+  </div>
+{% endblock %}
