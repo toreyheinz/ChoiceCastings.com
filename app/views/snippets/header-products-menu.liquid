@@ -1,6 +1,6 @@
 <li>
   <a href="/products">Products</a>
-  <ul class="menu">
+  <ul class="nested vertical medium-horizontal menu">
     {% for product in contents.products %}
       <li>{% link_to product %}</li>
     {% endfor %}
