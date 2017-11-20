@@ -176,6 +176,10 @@ body.index {
   }
 }
 
+.clickable, .pointer {
+  cursor: pointer;
+}
+
 footer {
   padding-top: rem-calc(10);
   background: $topbar-background;

@@ -1,0 +1,10 @@
+---
+title: Product template page
+content_type: products
+---
+{% extends 'layouts/application' %}
+{% block main %}
+<h1>{{ product.title }}</h1>
+<img src="{{ product.image.url | resize: '200x200#' }}" alt="{{ product.title }}" class="float-left">
+<p>{{ event.description }}</p>
+{% endblock %}
