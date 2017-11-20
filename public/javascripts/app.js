@@ -6,17 +6,21 @@ $(document).foundation();
 $('nav#top-nav > ul').addClass('dropdown menu')
 $('nav#top-nav > ul ul').addClass('menu')
 
-var slides = document.querySelectorAll('ul.slides .slide');
-var currentSlide = Math.floor(Math.random() * slides.length);
-slides[currentSlide].className = 'slide showing';
-
-var slideInterval = setInterval(nextSlide, 5000);
 
 function nextSlide() {
     slides[currentSlide].className = 'slide';
     currentSlide = (currentSlide+1)%slides.length;
     slides[currentSlide].className = 'slide showing';
 }
+
+var slides = document.querySelectorAll('ul.slides .slide');
+if (slides.length > 0) {
+  var currentSlide = Math.floor(Math.random() * slides.length);
+  slides[currentSlide].className = 'slide showing';
+
+  var slideInterval = setInterval(nextSlide, 5000);
+}
+
 
 $(document).on('click', '.clickable', function() {
   window.location.href = $(this).data('url');
