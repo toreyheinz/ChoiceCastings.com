@@ -17,10 +17,7 @@ is_layout: true
       gtag('js', new Date());
       gtag('config', 'UA-107293990-1');
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choice Castings | {{ page.slug }}</title>
+    {% include 'meta-data' %}
     {{ 'app.css' | stylesheet_tag }}
   </head>
   <body class="{{ page.slug }}">
@@ -63,6 +60,11 @@ is_layout: true
         {% block main %}
           <div class="row">
           <div class="column content page">
+          <h1>
+            {% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}
+              Page Heading/H1
+            {% endeditable_text %}
+          </h1>
           {% editable_text content %}Lorem ipsum{% endeditable_text %}
           </div>
           </div>
