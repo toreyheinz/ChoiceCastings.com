@@ -1,16 +1,18 @@
-- "Need Expedited Service?":
-    url: /offshoring-headaches
-    intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    image: /images/quality-concerns.jpg
-
-- "Quality Concerns?":
-    url: /offshoring-headaches
-    intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    image: /images/quality-concerns.jpg
-
-- "Offshoring Headaches?":
-    url: /offshoring-headaches
-    intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    image: /images/quality-concerns.jpg
-
-
+- Need Expedited Service?:
+    _slug: need-expedited-service
+    title: Need Expedited Service?
+    url: "/solutions/expedited-services"
+    intro: "<p>We can get things done faster, than just about anybody else!</p>"
+    image: "/samples/content_entries/need-expedited-service.jpg"
+- Quality Concerns?:
+    _slug: quality-concerns
+    title: Quality Concerns?
+    url: "/solutions/quality-assurance"
+    intro: "<p>Solving your&nbsp;Quality Concerns!</p>"
+    image: "/samples/content_entries/quality-concerns.jpg"
+- Offshoring Headaches?:
+    _slug: offshoring-headaches
+    title: Offshoring Headaches?
+    url: "/solutions/offshore-management"
+    intro: "<p>Managing&nbsp;your supply chain.</p>"
+    image: "/samples/content_entries/offshoring-headaches.jpg"

@@ -1,19 +1,34 @@
-- "Sample 1":
-    description: "Velit voluptatem quasi nesciunt dolorem molestiae earum ipsam. Natus maxime aperiam qui. Itaque placeat quas ut laudantium et. Voluptas et ut sed temporibus. Sunt nam porro occaecati animi recusandae voluptatem."
-    image: /images/wing-nuts.jpg # Path to a file in the public/samples folder or to a remote and external file.
-
-- "Sample 2":
-    description: "Similique laboriosam saepe. Delectus soluta alias ut. Necessitatibus et omnis quis ab a voluptate sequi."
-    image: /images/wing-nuts.jpg # Path to a file in the public/samples folder or to a remote and external file.
-    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
-
-- "Sample 3":
-    description: "Porro minus similique nostrum. Impedit mollitia eius assumenda earum enim. Molestiae quia quisquam nam ut provident. Ut unde facilis voluptate nihil. Similique et exercitationem molestiae ut."
-    image: /images/wing-nuts.jpg # Path to a file in the public/samples folder or to a remote and external file.
-    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
-
-- "Sample 4":
-    description: "Incidunt id eveniet voluptas qui soluta. Pariatur occaecati dolores dolore esse. Possimus qui dolorem minus ut. Quis numquam minima vero consectetur."
-    image: /images/wing-nuts.jpg # Path to a file in the public/samples folder or to a remote and external file.
-    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
-
+- Nest Caps:
+    _slug: nest-caps
+    title: Nest Caps
+    image: "/samples/content_entries/nest-caps.jpg"
+    description: <p>Nest Caps / Stacking Caps in Inventory  &nbsp;<br><br>Forging
+      equivalents - Cast Steel.<br><br>2" or 2½" square tubing.<br><br>Wholesale or
+      samples.<br></p>
+- Wing Nuts:
+    _slug: wing-nuts
+    title: Wing Nuts
+    image: "/samples/content_entries/wing-nuts.jpg"
+    description: <p>NEW!!! We now also carry wing screws to match the larger brass
+      wing nuts (see picture below). 1" wing span and thread length of 5/8". Thread
+      type 832.<br><br>We continue to carry a variety of wing nuts, wing screws and
+      custom hardware for your purchase. We stock 832 threaded wing nuts in malleable
+      (without zinc plating) and in brass with a wing span of 3/4".<br></p>
+- Hand Wheels:
+    _slug: hand-wheels
+    title: Hand Wheels
+    image: "/samples/content_entries/hand-wheel.jpg"
+    description: "<p>We produce a number of different size Handwheels. 50 piece minimum.
+      Zinc plated (yellow or silver) or powder coated. Click on the requested type
+      for available sizes.<br></p>"
+- Spike Grids:
+    _slug: spike-grid
+    title: Spike Grids
+    image: "/samples/content_entries/stock-items-wood-connector-1-sided.jpg"
+    description: "<p>We produce and stock spiked connectors commonly used in timber
+      construction, also known as timber connectors, spike grids, toothed connectors.
+      Zinc plated or unplated.<br><br>Due to our precision and fine sand in our sand
+      casting process, our malleable iron parts weigh far less than those from our
+      competitors - while meeting the same standards!<br><br>Available Sizes are 50mm,
+      65mm, 80mm, 95mm and 115 mm, one-sided and both sided, small and large holes,
+      details can be seen<br></p>"
