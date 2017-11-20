@@ -47,6 +47,7 @@ is_layout: true
                 </li>
               {% endif %}
             {% endfor %}
+            {% include 'header-products-menu' %}
           </ul>
         </div>
       </div>
@@ -87,7 +88,7 @@ is_layout: true
             {% include 'footer-menu-block' with slug: 'materials' %}
           </div>
           <div class="column medium-3">
-            {% include 'footer-menu-block' with slug: 'products' %}
+            {% include 'footer-products-menu' %}
           </div>
         </div>
           <p class="text-center">Copyright © 2012, Choice Castings Inc. All rights reserved.</p>

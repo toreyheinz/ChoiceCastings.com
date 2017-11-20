@@ -1,0 +1,8 @@
+<li>
+  <a href="/products">Products</a>
+  <ul class="menu">
+    {% for product in contents.products %}
+      <li>{% link_to product %}</li>
+    {% endfor %}
+  </ul>
+</li>

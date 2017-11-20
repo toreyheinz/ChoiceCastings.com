@@ -1,16 +1,38 @@
 ---
-title: Products
+title: InStock Items
 slug: products
-position: 5
-listed: true
+position: 10
+listed: false
 published: true
 is_layout: false
-seo_title: Products
+seo_title: InStock Items
 editable_elements:
-  main/content: '<h4>Stock Items</h4><div><strong><ul><li><strong><a href="http://choicecastings.com">NEST
-    CAPS</a></strong></li></ul><p></p><ul><li><strong><a href="http://choicecastings.com">WING
-    NUTS</a></strong></li></ul><p></p><ul><li><strong><a href="http://choicecastings.com"
-    title="Link: http://choicecastings.com">HAND WHEELS</a></strong></li></ul><p></p><ul><li><strong><a
-    href="http://choicecastings.com">SPIKE GRIDS</a></strong><br></li></ul></strong></div>'
+main/content: "<h1>InStock Items</h1>"
 ---
 {% extends "layouts/application" %}
+{% block main %}
+  <div class="row">
+    <div class="column content page">
+    <h1>{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
+    {% editable_text content %}Lorem ipsum{% endeditable_text %}
+    <div class="rowexpanded">
+      <div class="row wide small-up-2 large-up-4 text-center gutter-small">
+        {% editable_model products %}
+          {% for product in contents.products %}
+            <div class="column">
+              <div class="card clickable" data-url="{% path_to product %}">
+                <img src="{{ product.image.url | resize: '200x200#' }}">
+                <div class="title card-divider" data-equalizer-watch>
+                  <p class="lead">{{ product.title }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% endeditable_model %}
+      </div>
+    </div>
+    </div>
+  </div>
+{% endblock %}
+
+

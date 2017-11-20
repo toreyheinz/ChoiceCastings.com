@@ -1,4 +1,5 @@
 // require clickable
+
 $(document).foundation();
 // $(".top-bar").sticky({zIndex:10});
 
@@ -16,3 +17,8 @@ function nextSlide() {
     currentSlide = (currentSlide+1)%slides.length;
     slides[currentSlide].className = 'slide showing';
 }
+
+$(document).on('click', '.clickable', function() {
+  window.location.href = $(this).data('url');
+  return false;
+});
