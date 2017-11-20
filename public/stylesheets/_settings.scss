@@ -78,7 +78,7 @@ $foundation-palette: (
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$dark-gray: #201E1F;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
@@ -363,9 +363,9 @@ $drilldown-transition: transform 0.15s linear;
 $drilldown-arrows: true;
 $drilldown-padding: $global-menu-padding;
 $drilldown-nested-margin: 0;
-$drilldown-background: $white;
+$drilldown-background: $dark-gray;
 $drilldown-submenu-padding: $drilldown-padding;
-$drilldown-submenu-background: $white;
+$drilldown-submenu-background: $dark-gray;
 $drilldown-arrow-color: $primary-color;
 $drilldown-arrow-size: 6px;
 
@@ -848,8 +848,8 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.0rem;
-$topbar-background: #201E1F;
-$topbar-submenu-background: $topbar-background;
+$topbar-background: $dark-gray;
+$topbar-submenu-background: $dark-gray;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;

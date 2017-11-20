@@ -3,9 +3,19 @@
 $(document).foundation();
 // $(".top-bar").sticky({zIndex:10});
 
-$('nav#top-nav > ul').addClass('dropdown menu')
-$('nav#top-nav > ul ul').addClass('menu')
+// $('nav#top-nav > ul').addClass('dropdown menu')
+// $('nav#top-nav > ul ul').addClass('menu')
 
+$(window).on('changed.zf.mediaquery', function(event, newSize, oldSize){
+  console.log(newSize);
+  console.log(oldSize);
+});
+
+if (Foundation.MediaQuery.current == 'small') {
+  console.log(Foundation.MediaQuery.current);
+  // $('#topbar-menu').hide();
+  // $('.is-drilldown').hide();
+};
 
 function nextSlide() {
     slides[currentSlide].className = 'slide';
