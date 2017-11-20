@@ -1,3 +1,9 @@
+development:
+  host: http://cms.dev
+  handle: thoughtless-valley-1625
+  email: torey@teagles.io
+  api_key: d935dbe44cd303e463cd80f4a266acd03827bb0f
+
 production:
   host: http://cms.teagles.io
   handle: choice-castings

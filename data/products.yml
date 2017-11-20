@@ -1,0 +1,19 @@
+- "Sample 1":
+    description: "Velit voluptatem quasi nesciunt dolorem molestiae earum ipsam. Natus maxime aperiam qui. Itaque placeat quas ut laudantium et. Voluptas et ut sed temporibus. Sunt nam porro occaecati animi recusandae voluptatem."
+    image: /images/wing-nuts.jpg # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 2":
+    description: "Similique laboriosam saepe. Delectus soluta alias ut. Necessitatibus et omnis quis ab a voluptate sequi."
+    image: /images/wing-nuts.jpg # Path to a file in the public/samples folder or to a remote and external file.
+    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 3":
+    description: "Porro minus similique nostrum. Impedit mollitia eius assumenda earum enim. Molestiae quia quisquam nam ut provident. Ut unde facilis voluptate nihil. Similique et exercitationem molestiae ut."
+    image: /images/wing-nuts.jpg # Path to a file in the public/samples folder or to a remote and external file.
+    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Sample 4":
+    description: "Incidunt id eveniet voluptas qui soluta. Pariatur occaecati dolores dolore esse. Possimus qui dolorem minus ut. Quis numquam minima vero consectetur."
+    image: /images/wing-nuts.jpg # Path to a file in the public/samples folder or to a remote and external file.
+    # image: /samples/products/yourfile.txt # Path to a file in the public/samples folder or to a remote and external file.
+

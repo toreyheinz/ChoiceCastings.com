@@ -59,10 +59,12 @@ is_layout: true
         {% comment %}<img class="banner-image" src="{{ 'banner-1.jpg' | theme_image_url }}">{% endcomment %}
         <p class="lead">A Single Source for <br>ALL of Your Casting Needs</p>
       </div>
-    <div class="wrapper row expanded">
+    <div class="row expanded">
         {% block main %}
           <div class="row">
+          <div class="column content page">
           {% editable_text content %}Lorem ipsum{% endeditable_text %}
+          </div>
           </div>
         {% endblock %}
       <footer class="row expanded">

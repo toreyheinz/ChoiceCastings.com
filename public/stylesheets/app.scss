@@ -53,16 +53,32 @@ html {
   background: image-url('/images/body-bg.png') repeat;
 }
 
-div.wrapper {
+.content {
   background: #fff;
-  // padding-top: rem-calc(10);
-  // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: rem-calc(10);
+}
+
+.content.page {
+  margin: rem-calc(10);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  font-size: 1.4rem;
+
+  @include breakpoint(small only) {
+    font-size: 1.2rem;
+  }
 }
 
 .row.wide {
   max-width: rem-calc(1200);
 }
 
+.row.services {
+  background-color: #E1E2E4;
+}
+
+.row.stock-items {
+  background-color: #E1E2E4;
+}
 .top-bar {
   box-shadow: 0 1px 2px rgba(0,0,0,0.24);
   // background-color: #201E1F;
@@ -106,6 +122,9 @@ div.wrapper {
 body.index {
   .banner {
     height: 350px;
+    @include breakpoint(small only) {
+      height: 250px;
+    }
   }
 }
 
@@ -116,7 +135,7 @@ body.index {
   background-size: cover;
 
   @include breakpoint(small only) {
-    height: 250px;
+    height: 200px;
   }
 
   p.lead {
@@ -139,19 +158,6 @@ body.index {
   }
 }
 
-
-
-.row.services {
-  background-color: #E1E2E4;
-}
-
-.row.content {
-  padding: rem-calc(10) 0;
-}
-
-.row.stock-items {
-  background-color: #E1E2E4;
-}
 
 .card {
   .title {
