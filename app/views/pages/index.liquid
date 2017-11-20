@@ -10,7 +10,12 @@ is_layout: false
 {% block 'main' %}
   <div class="wide-layout">
     <div class="row expanded services text-center">
-      <h1>How can Choice Castings help you?</h1>
+      <h1>
+        {% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}
+          How can Choice Castings help you?
+        {% endeditable_text %}
+      </h1>
+
       <div class="row wide gutter-small" data-equalizer>
         {% for card in contents.featured_cards %}
           <div class="medium-4 column">
@@ -28,9 +33,11 @@ is_layout: false
     <div class="row expanded content">
       <div class="row wide">
         <div class="large-6 column">
-          <h2>Welcome to Choice Castings</h2>
-          <p>Opportunities for Foundries to add regular orders.  Industrial and commercial casting solutions.  Not just castings or machined parts, or .  We provide metal castings when you need them at the price you need.</p>
-          <p>We focus on know-how, leverage and strategy.  To allow you to focus on your manufacturing and sales.</p>
+          {% editable_text content %}
+            <h2>Welcome to Choice Castings</h2>
+            <p>Opportunities for Foundries to add regular orders.  Industrial and commercial casting solutions.  Not just castings or machined parts, or .  We provide metal castings when you need them at the price you need.</p>
+            <p>We focus on know-how, leverage and strategy.  To allow you to focus on your manufacturing and sales.</p>
+          {% endeditable_text %}
         </div>
         <div class="large-6 column">
           <ul class="slides text-center">
