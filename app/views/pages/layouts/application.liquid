@@ -61,13 +61,13 @@ is_layout: true
     <!-- End Top Bar -->
       <div class="row expanded text-center banner">
         {% comment %}<img class="banner-image" src="{{ 'banner-1.jpg' | theme_image_url }}">{% endcomment %}
-        <p class="lead">A Single Source for <br>ALL of Your Casting Needs</p>
+        <p class="lead">Your Single Source for Castings<br> and Machined Components.</p>
       </div>
     <div class="row expanded">
         {% block main %}
           <div class="row">
             <div class="column content page">
-              <h1>{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
+              <h1 class="text-center">{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
               {% editable_text content %}Lorem ipsum{% endeditable_text %}
             </div>
           </div>

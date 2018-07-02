@@ -50,42 +50,16 @@ editable_elements:
         </div>
         <div class="large-6 column">
           <ul class="slides text-center">
-            <li class="slide" style="background: url('{{ 'slides/slide-1.jpg' | theme_image_url | resize: '600x300#' }}') top center no-repeat;">
-              <div class="content">
-                <p class="lead">Stocked Items</p>
-                <p>Hand wheels - Nest caps - Wing nuts - Spike Grids</p>
-              </div>
-            </li>
-            <li class="slide" style="background: url('{{ 'slides/slide-2.jpg' | theme_image_url | resize: '600x300#' }}') top center no-repeat;">
-              <div class="content">
-                <p class="lead">Conversions</p>
-                <p>Castings are simpler and more effective than fabrications.</p>
-              </div>
-            </li>
-            <li class="slide" style="background: url('{{ 'slides/slide-3.jpg' | theme_image_url | resize: '600x300#' }}') top center no-repeat;">
-              <div class="content">
-                <p class="lead">Cast Threads</p>
-                <p>Malleable iron with cast internal NPT and ACME threads.</p>
-              </div>
-            </li>
-            <li class="slide" style="background: url('{{ 'slides/slide-4.jpg' | theme_image_url | resize: '600x300#' }}') top center no-repeat;">
-              <div class="content">
-                <p class="lead">Large Castings</p>
-                <p>Small to large.  Ferrous and Non Ferrous.  Sand, permanent mold, investment cast.</p>
-              </div>
-            </li>
-            <li class="slide" style="background: url('{{ 'slides/slide-5.jpg' | theme_image_url | resize: '600x300#' }}') top center no-repeat;">
-              <div class="content">
-                <p class="lead">Machined Components</p>
-                <p>We can provide raw or machined castings.</p>
-              </div>
-            </li>
-            <li class="slide" style="background: url('{{ 'slides/slide-6.jpg' | theme_image_url | resize: '600x300#' }}') top center no-repeat;">
-              <div class="content">
-                <p class="lead">Inventory Program</p>
-                <p>Your deliveries will be coordinated, using stocking or consignment programs.</p>
-              </div>
-            </li>
+            {% editable_model featured_slides %}
+              {% for slide in contents.featured_slides %}
+                <li class="slide" style="background: url('{{ slide.image.url | resize: '600x300#' }}') top center no-repeat;">
+                  <div class="content">
+                    <p class="lead">{{ slide.title }}</p>
+                    <p>{{ slide.intro }}</p>
+                  </div>
+                </li>
+              {% endfor %}
+            {% endeditable_model %}
           </ul>
         </div>
       </div>
@@ -94,7 +68,7 @@ editable_elements:
       <div class="row wide small-up-2 large-up-4 text-center gutter-small">
         <h3 class="">In Stock Items</h3>
         {% editable_model products %}
-          {% for product in contents.products %}
+          {% for product in contents.products limit: 4 %}
             <div class="column">
               <div class="card clickable" data-url="{% path_to product %}">
                 <img src="{{ product.image.url | resize: '200x200#' }}">
