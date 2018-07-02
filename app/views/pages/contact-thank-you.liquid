@@ -1,0 +1,35 @@
+---
+title: Contact Thank You
+slug: contact-thank-you
+position: 99
+listed: false
+published: true
+is_layout: false
+seo_title: Contact Thank You
+editable_elements:
+  main/content: '<strong>Contact Info:</strong><br>Phone: <a href="tel:16169566800">(616)
+    956-6800</a><br>Fax: (616) 956-6899<br>Email: <a target="_blank" href="mailto:info@choicecastings.com">info@choicecastings.com</a><div><br></div><div><b>Mailing
+    Address:</b><br>1550 E. Beltline Ave. SE, Suite 360<br>Grand Rapids, MI 49506<br><br><br></div>'
+  main/heading: You've Made the Right Choice!
+---
+{% extends "layouts/application" %}
+{% block main %}
+  <div class="row">
+    <div class="column content page">
+      {{ site.name }}
+      {{ site.email }}
+      {{ site.metafields }}
+      <ul>
+  {% for metafield in site.metafields.global %}
+    <li>
+      {{ metafield.label }}
+      <small>({{ metafield.name }})</small>
+      = {{ metafield.value }}
+    </li>
+  {% endfor %}
+</ul>
+      <h1>{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
+      {% editable_text content %}Lorem ipsum{% endeditable_text %}
+    </div>
+  </div>
+{% endblock %}

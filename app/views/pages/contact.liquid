@@ -20,7 +20,7 @@ editable_elements:
       {% editable_text content %}Lorem ipsum{% endeditable_text %}
       <hr>
       <h2>Send us a Message</h2>
-      {% model_form 'customer_messages', success: '/', error: '/contact' %}
+      {% model_form 'customer_messages', success: '/contact-thank-you', error: '/contact' %}
 
         {% if customer_message.errors %}
           <p>The following errors occured:</p>

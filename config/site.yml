@@ -6,5 +6,7 @@ seo_title: ''
 meta_keywords: ''
 meta_description: ''
 robots_txt: ''
-metafields: 
+metafields:
+  global:
+    email: 'info@choicecastings.com'
 metafields_ui: {}

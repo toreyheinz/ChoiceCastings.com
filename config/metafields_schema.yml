@@ -1,1 +1,5 @@
---- {}
+global:
+  label: Site
+  fields:
+    email:
+      type: string
