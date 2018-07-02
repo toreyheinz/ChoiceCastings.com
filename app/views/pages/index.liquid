@@ -27,7 +27,7 @@ editable_elements:
         {% editable_model featured_cards %}
           {% for card in contents.featured_cards %}
             <div class="medium-4 column">
-              <div class="card">
+              <div class="card clickable" data-url="{{ card.url }}">
                 <div class="title card-divider" data-equalizer-watch>
                   <p class="lead">{{ card.title }}</p>
                   {{ card.intro }}
