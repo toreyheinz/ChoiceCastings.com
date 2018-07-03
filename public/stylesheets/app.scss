@@ -66,6 +66,16 @@ html {
   @include breakpoint(small only) {
     // font-size: 1.2rem;
   }
+
+  .featured_image {
+    float: left;
+    margin: 0 rem-calc(8) rem-calc(8) 0;
+
+    img {
+      border: solid 4px #fefefe;
+      box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+    }
+  }
 }
 
 .row.wide {
@@ -188,6 +198,10 @@ body.index {
     p.lead {
       font-weight: bold;
       font-size: rem-calc(28);
+    }
+
+    a {
+      color: $white;
     }
   }
 }

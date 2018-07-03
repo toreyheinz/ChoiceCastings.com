@@ -7,7 +7,7 @@ published: true
 is_layout: false
 seo_title: InStock Items
 editable_elements:
-  main/heading: ''
+  main/heading: 'Choice Items'
   main/content: <p class="wysiwyg-text-align-center">We supply various engineered
     metal products</p>
 ---
@@ -15,17 +15,17 @@ editable_elements:
 {% block main %}
   <div class="row">
     <div class="column content page">
-    <h1>{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
+    <h1 class="text-center">{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
     {% editable_text content %}Lorem ipsum{% endeditable_text %}
     <div class="rowexpanded">
-      <div class="row wide small-up-2 large-up-4 text-center gutter-small">
+      <div class="row wide small-up-2 large-up-4 text-center gutter-small"  data-equalizer>
         {% editable_model products %}
           {% for product in contents.products %}
-            <div class="column">
+            <div class="column column-block">
               <div class="card clickable" data-url="{% path_to product %}">
                 <img src="{{ product.image.url | resize: '200x200#' }}">
                 <div class="title card-divider" data-equalizer-watch>
-                  <p class="lead">{{ product.title }}</p>
+                  <p>{{ product.title }}</p>
                 </div>
               </div>
             </div>

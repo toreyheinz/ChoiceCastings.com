@@ -1,0 +1,23 @@
+---
+title: Page
+slug: page
+position: 99
+listed: false
+published: false
+is_layout: true
+---
+{% capture 'featured_image' %}{% editable_file 'featured_image', block: 'main' %}{% endeditable_file %}{% endcapture %}
+{% extends "layouts/application" %}
+{% block main %}
+  <div class="row">
+    <div class="column content page">
+      <h1 class="text-center">{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
+      {% if featured_image != blank %}
+        <div class="featured_image">
+          <img class="thumbnail" title="{{ page.title }}" alt="{{ page.title }}" src="{{ featured_image | resize: '400x>', optimize: 80 }}">
+        </div>
+      {% endif %}
+      {% editable_text content %}Lorem ipsum{% endeditable_text %}
+    </div>
+  </div>
+{% endblock %}

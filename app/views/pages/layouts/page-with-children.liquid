@@ -1,0 +1,35 @@
+---
+title: Page with Children Shown
+slug: page-with-children
+position: 99
+listed: false
+published: false
+is_layout: true
+---
+{% capture 'featured_image' %}{% editable_file 'featured_image', block: 'main' %}{% endeditable_file %}{% endcapture %}
+{% extends "layouts/application" %}
+{% block main %}
+  <div class="row">
+    <div class="column content page">
+      <h1 class="text-center">{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
+      {% if featured_image != blank %}
+        <div class="featured_image">
+          <img class="thumbnail" title="{{ page.title }}" alt="{{ page.title }}" src="{{ featured_image | resize: '400x>', optimize: 80 }}">
+        </div>
+      {% endif %}
+      {% editable_text content %}Lorem ipsum{% endeditable_text %}
+      <hr>
+      <div class="row small-up-2 medium-up-3 large-up-4" data-equalizer>
+        {% for child in page.children %}
+          <div class="column column-block">
+            <div class="card clickable" data-url="{{ child.fullpath }}">
+              <div class="title card-divider text-center" data-equalizer-watch>
+                <p><a href="{{ child.fullpath }}">{{ child.editable_elements.main.heading }}</a></p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
