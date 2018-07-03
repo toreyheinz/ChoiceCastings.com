@@ -7,7 +7,9 @@ content_type: products
 <div class="row">
   <div class="column content page">
     <h1>{{ product.title }}</h1>
-    <img src="{{ product.image.url | resize: '200x200#' }}" alt="{{ product.title }}" class="shadow float-left">
+    <div class="featured_image">
+      <img src="{{ product.image.url | resize: '200x200#' }}" alt="{{ product.title }}" class="thumbnail">
+    </div>
     {{ product.description }}
   </div>
 </div>

@@ -11,7 +11,7 @@ is_layout: true
 {% block main %}
   <div class="row">
     <div class="column content page">
-      <h1 class="text-center">{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
+      <h1>{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
       {% if featured_image != blank %}
         <div class="featured_image">
           <img class="thumbnail" title="{{ page.title }}" alt="{{ page.title }}" src="{{ featured_image | resize: '400x>', optimize: 80 }}">

@@ -15,7 +15,7 @@ editable_elements:
 {% block main %}
   <div class="row">
     <div class="column content page">
-    <h1 class="text-center">{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
+    <h1>{% editable_text "heading", line_break: false, format: 'raw', rows: 1 %}{% endeditable_text %}</h1>
     {% editable_text content %}Lorem ipsum{% endeditable_text %}
     <div class="rowexpanded">
       <div class="row wide small-up-2 large-up-4 text-center gutter-small"  data-equalizer>
