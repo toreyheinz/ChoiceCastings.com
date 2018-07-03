@@ -1,18 +1,31 @@
-- Need Expedited Service?:
-    _slug: need-expedited-service
-    title: Need Expedited Service?
-    url: "/solutions/expedited-services"
-    intro: "<p>We can get things done faster, than just about anybody else!</p>"
-    image: "/samples/content_entries/need-expedited-service.jpg"
 - Quality Concerns?:
     _slug: quality-concerns
     title: Quality Concerns?
     url: "/solutions/quality-assurance"
-    intro: "<p>Solving your&nbsp;Quality Concerns!</p>"
+    intro: "<p>Standard capabilities are process engineers with extensive experience
+      supported by pattern shops.</p><p>But if one foundry is not well-suited for
+      your application or tooling, we have other options that surely will be capable
+      of solving your quality issues.</p><p>Lastly, our standard is to continuously
+      work on processing improvements to maintain the competitiveness of your products.<br></p>"
     image: "/samples/content_entries/quality-concerns.jpg"
+- Need Expedited Service?:
+    _slug: need-expedited-service
+    title: Need Expedited Service?
+    url: "/solutions/expedited-services"
+    intro: "<p>We leverage our spend and have flexibility in production schedules
+      due to ordering for stocking purposes.</p><p>This allows us more freedom in
+      scheduling and getting orders processed - often in just a few days.</p><p>Can
+      your foundry do that?</p>"
+    image: "/samples/content_entries/need-expedited-service.jpg"
 - Offshoring Headaches?:
     _slug: offshoring-headaches
     title: Offshoring Headaches?
     url: "/solutions/offshore-management"
-    intro: "<p>Managing&nbsp;your supply chain.</p>"
+    intro: "<p>Were you caught up in the offshoring wave trying to reduce your purchase
+      price and things are not working out for you?&nbsp; Offshore suppliers can be
+      inconsistent and difficult to manage.</p><p>We have established sourcing channels
+      to India and China and stock parts domestically to avoid supply delays.</p><p>But
+      our major focus now is associated with <strong>RESHORING </strong>parts.&nbsp;
+      We can help you find domestic homes for your parts and program manage the return
+      and launch of production from known and competitive reliable manufacturers.<br></p>"
     image: "/samples/content_entries/offshoring-headaches.jpg"
